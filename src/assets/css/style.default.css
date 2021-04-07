@@ -316,10 +316,11 @@ input {
 }
 
 .page {
-  /* background: #EEF5F9; */
-  /* background: linear-gradient(90deg, #F4F4F8, #EBEFF0);  */
-  /* background: rgb(56,78,154);
-  background: linear-gradient(90deg, rgba(56,78,154,0.9387955011106005) 0%, rgba(255,130,1,0.2721288344439339) 75%);  */
+  background-image: url('../img/BG/BG.jpg');
+}
+
+body{
+  color : #fff !important;
 }
 
 .page .text-white {

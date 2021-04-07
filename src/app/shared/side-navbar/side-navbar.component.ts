@@ -35,10 +35,10 @@ export class SideNavbarComponent {
   ngOnInit(): void{
 
     this.route.navigate(['/landing/landing-page']);
-    const menuItems = JSON.parse(sessionStorage.getItem('menuDetails'));
-    menuItems.forEach((element) => {
+    // const menuItems = JSON.parse(sessionStorage.getItem('menuDetails'));
+    // menuItems.forEach((element) => {
     
-    });
+    // });
   }
 
   ngOnChanges(){
