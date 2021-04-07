@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "olahos": {
+    "assesment": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/olahos",
+            "outputPath": "dist/assesment",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -67,18 +67,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "olahos:build"
+            "browserTarget": "assesment:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "olahos:build:production"
+              "browserTarget": "assesment:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "olahos:build"
+            "browserTarget": "assesment:build"
           }
         },
         "test": {
@@ -115,18 +115,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "olahos:serve"
+            "devServerTarget": "assesment:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "olahos:serve:production"
+              "devServerTarget": "assesment:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "olahos",
+  "defaultProject": "assesment",
   "cli": {
     "analytics": "300e3ad9-3302-4d7a-8dd4-790a22ba2db6"
   }
