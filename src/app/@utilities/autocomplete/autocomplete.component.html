@@ -1,0 +1,6 @@
+<form [formGroup]="autoCompleteFG">
+    <p-autoComplete  field="title" formControlName="formValue" 
+    [suggestions]="suggestionObj" [dropdown]="false" 
+    (completeMethod)="filterSuggestionObj($event)" [forceSelection] = "true"
+    (onSelect) = "onSelectSuggestionObj($event)" ></p-autoComplete>
+</form>

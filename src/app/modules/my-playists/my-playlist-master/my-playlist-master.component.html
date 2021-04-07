@@ -1,0 +1,17 @@
+<div class="toolbar-panel">  
+    <span>Playlists</span> 
+</div> 
+<br>
+<div class="form-group row" *ngIf = "playLists.length > 0"> 
+    <div class="col-sm-12"  *ngFor="let item of playLists;"> 
+        <h2> {{item.name}} </h2>
+        <br>
+        <div >
+            <div class="col-sm-3" *ngFor="let songdetails of item.song;">
+                <img src="assets\img\carousel\iconmusic.jpg">
+                <br>
+                <span> {{songdetails.title}} </span>
+            </div>
+        </div> 
+    </div>  
+</div>    

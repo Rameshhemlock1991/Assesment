@@ -1,0 +1,13 @@
+<div class="toolbar-panel">  
+    <span>My Playlists</span> 
+    <button (click)= "onClickCreate()" class="btn btn-primary float-right toolbarButton" >Create Playlists</button>
+</div> 
+<br>
+<div class="form-group row" *ngIf = "playLists.length > 0"> 
+    <div  *ngFor="let item of playLists;"> 
+        <div class="col-sm-3">
+            <img src="assets\img\carousel\iconmusic.jpg"  class = "cursor-hand" (click) = "onClickPlayList(item)">
+            <span> {{item.name}} </span>
+        </div> 
+    </div>  
+</div>    

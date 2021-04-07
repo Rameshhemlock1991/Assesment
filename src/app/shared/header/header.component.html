@@ -1,0 +1,11 @@
+<nav class="navbar" id="sidenavAccordion">  
+  <div class="col-sm-12 no-padding"> 
+      <div class="menu-icon"><img src="assets/img/header/open-menu.svg" class="float-left" (click) = "onMenuClickClicked()"></div>
+      <div class="logo float-left header-logo"><img src="assets/img/logo/logo.png"></div>
+      <span (click)= "appUtils.navigate('/landing/landing-page', this)" class="float-left headerMenu" >Home</span>
+      <span (click)= "appUtils.navigate('/myplayists/myplayists-create', this)" class="float-left headerMenu" >My Playlists</span>
+      <div class="float-left"></div>
+      <div class="menu-icon"><img src="assets/img/header/user-circle.svg" class="float-right margin-left margin-right"></div> 
+      
+  </div> 
+</nav>

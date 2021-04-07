@@ -1,0 +1,11 @@
+<div class="page">
+    <app-header (onMenuClick) = "setSideBarValue()"></app-header>
+    <div>
+        <app-side-navbar [visibleSidebarInputFrom] = "visibleSidebarInputFrom" [visibleSidebar] = "visibleSidebarInput"> </app-side-navbar>
+        <div class="col-md-12 main-container">
+            <router-outlet></router-outlet>
+            <ngx-ui-loader></ngx-ui-loader> 
+        </div>
+    </div>
+    <p-confirmDialog header="Confirmation" icon="pi pi-exclamation-triangle"></p-confirmDialog>
+</div>

@@ -1,0 +1,51 @@
+
+<div class="toolbar-panel">  
+    <form [formGroup] = "landingPageForm" >
+        <div class="form-group row"> 
+            <label for="colFormLabelSm" class="col-sm-1 col-form-label col-form-label-sm"> Search </label>
+            <div class="col-sm-8">
+                <app-autocomplete [formGroup]="landingPageForm"  [config] = "autocompleteConfig" [formControlId] = "'strSearchId'"
+                [inputSuggestionObj] = "strSearchIdObj" [formName] = "strSearchIdSelVal"></app-autocomplete>
+            </div> 
+         </div>
+    </form>
+</div> 
+
+<div class="carousel">
+    <h2>TRENDING SONGS</h2>
+
+    <p-carousel [value]="songlists" styleClass="custom-carousel" [numVisible]="4" [numScroll]="1"   [responsiveOptions]="responsiveOptions">
+        <ng-template let-songlist pTemplate="item">
+            <i class="fas fa-plus-square" (click)= "onClickAdd(songlist)" title="Add to Playlists"></i>
+            <div class="product-item">
+                <div class="product-item-content">
+                    <div class="p-mb-3">
+                        <img src="{{songlist.thumbnailUrl}}" [alt]="songlist.title"  />
+                    </div>
+                    <div>
+                        <h4 class="p-mb-1">{{songlist.title}}</h4> 
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </p-carousel>
+
+    <br>
+    <h2>TRENDING ALBUMS</h2>
+
+    <p-carousel [value]="albumlists" styleClass="custom-carousel" [numVisible]="4" [numScroll]="1"  [responsiveOptions]="responsiveOptions">
+        <ng-template let-albumlist pTemplate="item">
+            <div class="product-item">
+                <div class="product-item-content">
+                    <div class="p-mb-3">
+                        <img src="https://via.placeholder.com/150/771796" [alt]="albumlist.title"  />
+                    </div>
+                    <div>
+                        <h4 class="p-mb-1">{{albumlist.title}}</h4>
+                        
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </p-carousel>
+</div>

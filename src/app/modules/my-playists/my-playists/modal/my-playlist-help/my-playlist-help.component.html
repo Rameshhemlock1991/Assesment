@@ -1,0 +1,23 @@
+<br>
+
+<div class="form-group row" *ngIf = "playLists.length > 0"> 
+    <div  *ngFor="let item of playLists;"> 
+        <div class="col-sm-5 cursor-hand" (click) = "onClickPlaylist(item)">
+            <i class="fas fa-music"></i><span> {{item.name}} </span>
+        </div> 
+    </div>  
+</div>  
+<br>
+
+<form [formGroup] = "playListForm">
+    <div class="form-group row" *ngIf = "enableCreate"> 
+        <div class="col-sm-6">
+            <input type="text" formControlName = "strPlaylist" class="form-control form-control-sm right-border-none" id="strPlaylist">
+        </div> 
+        <div class="col-sm-2" >
+            <button class="btn btn-primary float-right" type="button" (click)= "onClickCreate($event)">Create</button> 
+        </div>  
+    </div>   
+</form>   
+
+<p-confirmDialog [style]="{width: '30vw'}"></p-confirmDialog>
